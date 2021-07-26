@@ -25,7 +25,7 @@ module.exports = {
           // 常见style标签将样式放入
           //'style-loader',
           // 这个loader取代style-loader.作用：提取js中的css成单独文件
-          MiniCssExtractPlugin,
+          MiniCssExtractPlugin.loader,
           // 将css文件整合到js文件中
           'css-loader'
         ]

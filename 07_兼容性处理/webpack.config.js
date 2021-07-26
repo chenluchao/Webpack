@@ -18,7 +18,7 @@ module.exports = {
       {
         test:/\.css/,
         use:[
-          MiniCssExtractPlugin,
+          MiniCssExtractPlugin.loader,
           'css-loader',
           /* 
             css兼容性处理：postcss --> postcss-loader postcss-preset-env
