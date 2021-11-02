@@ -39,7 +39,7 @@ module.exports = {
       /* 
         通常来讲，一个文件只能被一个loader处理
         当一个文件要被多个loader处理，name一定要指定loader执行的先后顺序
-          线执行eslint 在执行babel
+          先执行eslint 再执行babel
       */
       {
         // 对js语法检查

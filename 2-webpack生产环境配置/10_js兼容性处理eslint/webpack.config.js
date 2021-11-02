@@ -15,7 +15,7 @@ module.exports = {
           2、全部js兼容性处理 --> @babel/polyfill
                 在需要的js文件中直接引入 `import @babel/polyfill` 即可
              问题：我只要解决部分兼容性问题，但是将所有兼容性代码引入，增大了代码的体积
-          3、需要座兼容性处理的就做：按需加载 --> core-js
+          3、需要做兼容性处理的就做：按需加载 --> core-js
 
       */
      {
