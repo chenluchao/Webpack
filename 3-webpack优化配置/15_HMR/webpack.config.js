@@ -1,11 +1,11 @@
 /* 
   HMR:hot module replacement 热替换/模块热替换
-      作用：一个模块发生变化，只会重新打包则一个模块（而不是打包所有模块）
+      作用：一个模块发生变化，只会重新打包这一个模块（而不是打包所有模块）
       极大提升构建速度
 
         样式文件：可以使用HMR功能；因为style-loader内部实现了~
         js文件  ：默认没有HMR功能-->需要添加js代码，添加支持HMR功能的代码
-                  注意：HMR功能对js的处理，只能处理非入口js文件的其他文件
+                  注意：HMR功能对js的处理，只能处理非入口js文件
                   if(module.hot){
                     // 一旦module.hot为true，说明开启了HMR功能，-->让HMR功能代码生效
                     module.hot.accept('./prient.js',function(){
@@ -14,7 +14,7 @@
                       print()//执行代码
                     })
                   }
-        html文件：默认没有HMR功能，同时会导致html不能热更新了（不需要座HMR功能）
+        html文件：默认没有HMR功能，同时会导致html不能热更新了（不需要做HMR功能）
                   解决html不能热更新：修改entry将html文件引入
 */
 

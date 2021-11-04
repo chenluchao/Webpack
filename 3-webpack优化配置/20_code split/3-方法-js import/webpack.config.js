@@ -2,10 +2,6 @@ const { resolve } = require('path')
 // 处理html
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-/* 
-
-*/
-
 // 定义nodejs环境变量，决定使用browserslist的哪个环境用于css兼容性处理
 process.env.NODE_ENV = 'production'
 module.exports = {

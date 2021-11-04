@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
       cacheDirectory:true
       --> 让第二次打包构建速度更快
     文件资源缓存：
-      hash:每次webpack构建时回升长一个唯一的hash值。
+      hash:每次webpack构建时会生成一个唯一的hash值。
           问题：因为js和css同事使用一个hash值，如果重新打包，会导致所有缓存失效。（可能我却只改动了一个文件）
       chunkhash:根据chunk生成的hash值，如果打包来源于同一个chunk，那么hash的值就一样
           因为css是在js中引入的，所以同属于一个chunk
@@ -42,6 +42,7 @@ module.exports = {
   module: {
     rules: [
       {
+        // 基本js兼容性处理
         test: /\.js$/,
         exclude:/node_modules/,
         loader:'babel-loader',
